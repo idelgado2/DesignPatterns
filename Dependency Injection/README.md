@@ -1,10 +1,9 @@
-Dependency Injection
+# Dependency Injection
 
-"Dependency injection mean giving an object its instance variables."
+> _"Dependency injection mean giving an object its instance variables....
+> Dependency Injection” is a 25-dollar term for a 5-cent concept."_ > [James Shore](https://www.jamesshore.com/v2/blog/2006/dependency-injection-demystified)
 
-When you have a piece of code that uses another piece of code. Instead of using the other piece of code directly you pass it in istead.
-
-https://www.jamesshore.com/v2/blog/2006/dependency-injection-demystified
+When you have a piece of code that uses another piece of code. Instead of using the other piece of code directly you pass it in instead. A class will recieve and object/functions it depends on instead of creating them itself.
 
 Classes will can initilize instance variables in a class constructor, like so.
 
@@ -60,3 +59,13 @@ public class ExampleTest {
   }
 }
 ```
+
+## When to use Dependency Injection
+
+- When you need to inject the same dependency into multiple classes
+- When you need to pass different configurations of a dependency to classes
+- When you need to inject different implementations (types) of the same dependency.
+
+## When NOT use Dependency Injection
+
+- When you will never need a different dependency implementation or configuration
