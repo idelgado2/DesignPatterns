@@ -1,32 +1,32 @@
-class ClassB {
-  ClassB(){}
+class Engine {
+  Engine(){}
 
-  int calculate(){
-      return (int) Math.round(Math.random() * 100);
+  void start(){
+      System.out.println("Engine goes vrooomm!");
   }
 }
 
-class ClassA {
-  ClassB classB;
+class Car {
+  Engine engine;
 
   /* Constructor Injection */
-  ClassA(ClassB injected){
-      classB = injected;
+  Car(Engine injected){
+      engine = injected;
   }
 
-  int classRandom(){
-      return classB.calculate();
+  void carStartEngine(){
+      engine.start();
   }
 }
 
 public class DependencyInjectionTest {
     public static void main(String[] args) {
-        /* Notice that we are creating ClassB fisrt */
-        ClassB classB = new ClassB();
+        /* Notice that we are creating engine fisrt */
+        Engine engine = new Engine();
     
         /* Constructor Injection */
-        ClassA classA = new ClassA(classB);
+        Car car = new Car(engine);
     
-        System.out.println("Random number from Class B method: " + classA.classRandom());
+        car.carStartEngine();
       }
 }
