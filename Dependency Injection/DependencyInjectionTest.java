@@ -21,10 +21,7 @@ class Car {
 
 public class DependencyInjectionTest {
     public static void main(String[] args) {
-        /* Notice that we are creating engine fisrt */
-        Engine engine = new Engine();
-    
-        /* Constructor Injection */
+        Engine engine = new Engine(); 
         Car car = new Car(engine);
     
         car.carStartEngine();
